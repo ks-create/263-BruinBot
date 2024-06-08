@@ -2,7 +2,9 @@
 
 BruinBot is a UCLA-student-friendly chatbot designed to assist new students in familiarizing themselves with various aspects of university life. BruinBot provides information on dining halls, dormitories, campus amenities, and more, offering consistent, accurate, and engaging responses.
 
-## Contributors: Qirui Bao,  Yifan Chao,  Kan Sun, Kunpeng Wang
+## Contributors: 
+
+Qirui Bao,  Yifan Chao,  Kan Sun, Kunpeng Wang
 
 ## Introduction
 
