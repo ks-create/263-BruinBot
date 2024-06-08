@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Increased base font size */
+}
+
+.chat-container {
+    width: 90%; /* Increased width to accommodate larger text */
+    height: 95vh; /* Increased height */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.chat-box {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 30px; /* Increased padding */
+    border-bottom: 1px solid #ccc;
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input-container {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    height: 60px; /* Larger input height */
+    border: none;
+    padding: 0 15px; /* Increased padding */
+    font-size: 40px; /* Larger text for input */
+    outline: none;
+}
+
+textarea#userInput {
+    flex-grow: 1;
+    min-height: 60px; /* Increased minimum height */
+    height: auto; /* Allows the textarea to grow */
+    border: none;
+    padding: 15px; /* More padding for larger text */
+    font-size: 32px; /* Larger text size */
+    outline: none;
+    resize: none; /* Keeps the textarea from being resized */
+    overflow: auto; /* Handles overflow with scrolling */
+    box-sizing: border-box; /* Includes padding and border in the height calculation */
+    width: 100%; /* Fills the width of its container */
+    border-radius: 8px; /* Optional: Rounds the corners */
+    background-color: #FFF; /* Optional: Sets background color */
+    margin-bottom: 10px; /* Optional: Adds space below the input */
+}
+
+
+button {
+    width: 100px; /* Slightly wider button */
+    height: 106px; /* Taller button to match input height */
+    border: none;
+    padding: 0 10px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 20px; /* Larger button text */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.bot-message, .user-message {
+    text-align: left;
+    margin: 10px;
+    padding: 15px 25px; /* Ensured consistent padding */
+    background-color: #FFF; /* Bot messages in white */
+    color: black; /* Ensuring text color is consistent */
+    border-radius: 18px; /* Bubble-like rounded corners */
+    display: inline-block;
+    max-width: 80%; /* Limit width to avoid stretching too far */
+    word-wrap: break-word; /* Ensures words wrap and break correctly */
+    overflow-wrap: break-word; /* Modern approach to handling word wrapping */
+    position: relative; /* Needed for positioning the arrow correctly */
+    font-size: 32px; /* Larger font size for better readability */
+}
+
+.bot-message {
+    align-self: flex-start; /* Align bot messages to the left */
+    background-color: #FFF; /* White background for bot messages */
+}
+
+.user-message {
+    align-self: flex-end; /* Align user messages to the right */
+    background-color: #e0e0e0; /* Grey background for user messages */
+}
+
+.user-message::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px; /* Arrow position adjusted */
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-left-color: #e0e0e0; /* Arrow color matches user message background */
+    border-right: 0;
+    margin-top: 5px;
+    margin-left: -15px;
+}
